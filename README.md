@@ -4,36 +4,7 @@ A full-stack **Personal Finance Manager** application built with **MERN** (Mongo
 
 ---
 ## 🧩 Project Structure
-User/ (Frontend)
-├── public/
-├── src/
-│ ├── Pages/
-│ ├── components/
-│ ├── assets/
-│ ├── utils/
-│ └── index.js, App.js, etc.
-├── package.json
-├── package-lock.json
-└── .gitignore
 
-Server/ (Backend)
-├── DB/
-│ └── Database.js
-├── Routers/
-│ ├── Transactions.js
-│ └── userRouter.js
-├── controllers/
-│ ├── transactionController.js
-│ └── userController.js
-├── models/
-│ ├── TransactionModel.js
-│ └── UserSchema.js
-├── app.js
-├── package.json
-├── package-lock.json
-└── .gitignore
-
----
 ## ✨ Features
 
 - 💰 Add, edit, and delete income & expense transactions  
