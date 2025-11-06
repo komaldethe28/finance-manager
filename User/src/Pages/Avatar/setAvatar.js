@@ -150,50 +150,7 @@ const SetAvatar = () => {
               },
             },
             fpsLimit: 60,
-            particles: {
-              number: {
-                value: 200,
-                density: {
-                  enable: true,
-                  value_area: 800,
-                },
-              },
-              color: {
-                value: "#ffcc00",
-              },
-              shape: {
-                type: "circle",
-              },
-              opacity: {
-                value: 0.5,
-                random: true,
-              },
-              size: {
-                value: 3,
-                random: { enable: true, minimumValue: 1 },
-              },
-              links: {
-                enable: false,
-              },
-              move: {
-                enable: true,
-                speed: 2,
-              },
-              life: {
-                duration: {
-                  sync: false,
-                  value: 3,
-                },
-                count: 0,
-                delay: {
-                  random: {
-                    enable: true,
-                    minimumValue: 0.5,
-                  },
-                  value: 1,
-                },
-              },
-            },
+            
             detectRetina: true,
           }}
           style={{

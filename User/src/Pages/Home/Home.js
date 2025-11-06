@@ -136,7 +136,7 @@ const Home = () => {
   };
 
 
-  
+
 
 
   useEffect(() => {
@@ -153,9 +153,9 @@ const Home = () => {
           type: type,
         });
         console.log(data);
-  
+
         setTransactions(data.transactions);
-  
+
         setLoading(false);
       } catch (err) {
         // toast.error("Error please Try again...", toastOptions);
@@ -185,7 +185,7 @@ const Home = () => {
       ) : (
         <>
           <Container
-            style={{ position: "relative", zIndex: "2 !important", backgroundColor:'black'  }}
+            style={{ position: "relative", zIndex: "2 !important", backgroundColor: 'black' }}
             className="mt-3"
           >
             <div className="filterRow">
@@ -224,16 +224,14 @@ const Home = () => {
                 <FormatListBulletedIcon
                   sx={{ cursor: "pointer" }}
                   onClick={handleTableClick}
-                  className={`${
-                    view === "table" ? "iconActive" : "iconDeactive"
-                  }`}
+                  className={`${view === "table" ? "iconActive" : "iconDeactive"
+                    }`}
                 />
                 <BarChartIcon
                   sx={{ cursor: "pointer" }}
                   onClick={handleChartClick}
-                  className={`${
-                    view === "chart" ? "iconActive" : "iconDeactive"
-                  }`}
+                  className={`${view === "chart" ? "iconActive" : "iconDeactive"
+                    }`}
                 />
               </div>
 

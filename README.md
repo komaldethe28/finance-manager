@@ -32,7 +32,7 @@ cd finance-manager
 
 cd Server
 npm install
-npm run dev
+npm start
 
 cd ../User
 npm install
