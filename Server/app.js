@@ -29,7 +29,13 @@ app.get("/", (req, res) => {
   res.send("✅ FinManager Server is running and connected to MongoDB!");
 });
 
+// // Start server
+// app.listen(port, () => {
+//   console.log(`🚀 Server is listening on http://localhost:${port}`);
+// });
+
 // Start server
-app.listen(port, () => {
-  console.log(`🚀 Server is listening on http://localhost:${port}`);
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
 });
