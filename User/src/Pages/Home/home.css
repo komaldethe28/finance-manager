@@ -6,7 +6,7 @@
   flex-wrap: wrap;
   padding: 20px;
   gap: 15px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -120,45 +120,75 @@
   }
 }
 
-/* MOBILE (max-width: 600px) */
+/* ---------- MOBILE (max-width: 600px) ---------- */
 @media only screen and (max-width: 600px) {
-  .data-table tbody tr {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+  .filterRow {
+    flex-direction: column;
+    align-items: stretch;
     padding: 10px;
-    margin-bottom: 15px;
-  }
-
-  .data-table tbody td {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 5px;
-  }
-
-  /* Name + three-dot menu container */
-  .data-table tbody td.name-column {
-    flex: 2;
-    justify-content: flex-start;
-    gap: 5px;
-  }
-
-  /* Edit/Delete buttons container */
-  .data-table tbody td.actions-column {
-    flex: 1;
-    justify-content: center;
     gap: 10px;
   }
 
-  /* Transaction info/details */
-  .data-table tbody td.info-column {
-    flex: 2;
-    justify-content: flex-end;
-    text-align: right;
+  .addNew {
+    display: none !important;
   }
+
+  .mobileBtn {
+    display: inline-block !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .iconBtnBox {
+    border: none;
+    justify-content: space-around;
+  }
+
+  .date {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .date .form-group {
+    width: 100%;
+  }
+
+  .containerBtn {
+    margin-left: 0 !important;
+  }
+
+  .data-table {
+    font-size: 12px;
+  }
+
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table tbody tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .data-table tbody tr {
+  display: block;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.data-table tbody td {
+  display: flex;
+  flex-direction: row;   /* keep horizontal alignment */
+  justify-content: flex-start; /* start from left */
+  align-items: center;   /* vertically center content */
+  padding: 6px 0;
+  gap: 10px; /* optional spacing between items */
+}
+
 }
