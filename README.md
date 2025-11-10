@@ -20,7 +20,7 @@ A full-stack **Personal Finance Manager** application built with **MERN** (Mongo
 
 - **Frontend:** React, CSS  
 - **Backend:** Node.js, Express.js  
-- **Database:** MongoDB (via MongoDB Compass)  
+- **Database:** MongoDB (via MongoDB Atlas)  
 - **Libraries:** Axios, JWT, Bcrypt, Chart.js 
 
 ---
