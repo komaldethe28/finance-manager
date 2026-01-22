@@ -69,11 +69,21 @@ const Register = () => {
         toast.success(data.message, toastOptions);
         navigate("/");
       } else {
+        // Show the actual error message from backend
         toast.error(data.message, toastOptions);
+        // If email already exists, redirect to login after showing error
+        if (data.message.toLowerCase().includes("already exists")) {
+          setTimeout(() => navigate("/login"), 2000);
+        }
       }
     } catch (error) {
       console.error(error);
-      toast.error("Something went wrong! Please try again.", toastOptions);
+      // Show real error message from backend
+      const errorMessage = 
+        error.response?.data?.message || 
+        error.message || 
+        "Something went wrong! Please try again.";
+      toast.error(errorMessage, toastOptions);
     } finally {
       // ✅ Stop loading after the request completes
       setLoading(false);

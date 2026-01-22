@@ -64,10 +64,20 @@ const Login = () => {
         toast.success(data.message, toastOptions);
         navigate("/");
       } else {
+        // Show the actual error message from backend
         toast.error(data.message, toastOptions);
+        // If user not found, redirect to register after showing error
+        if (data.message.toLowerCase().includes("not found")) {
+          setTimeout(() => navigate("/register"), 2000);
+        }
       }
     } catch (error) {
-      toast.error("Server error, please try again later.", toastOptions);
+      // Show real error message from backend
+      const errorMessage = 
+        error.response?.data?.message || 
+        error.message || 
+        "Server error, please try again later.";
+      toast.error(errorMessage, toastOptions);
     } finally {
       setLoading(false);
     }
