@@ -53,7 +53,6 @@ const Home = () => {
     const avatarFunc = async () => {
       if (localStorage.getItem("user")) {
         const user = JSON.parse(localStorage.getItem("user"));
-        console.log(user);
 
         if (user.isAvatarImageSet === false || user.avatarImage === "") {
           navigate("/setAvatar");
@@ -144,7 +143,6 @@ const Home = () => {
     const fetchAllTransactions = async () => {
       try {
         setLoading(true);
-        console.log(cUser._id, frequency, startDate, endDate, type);
         const { data } = await axios.post(getTransactions, {
           userId: cUser._id,
           frequency: frequency,
@@ -152,7 +150,6 @@ const Home = () => {
           endDate: endDate,
           type: type,
         });
-        console.log(data);
 
         setTransactions(data.transactions);
 

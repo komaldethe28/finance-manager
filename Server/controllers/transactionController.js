@@ -69,8 +69,6 @@ export const getAllTransactionController = async (req, res) => {
   try {
     const { userId, type, frequency, startDate, endDate } = req.body;
 
-    console.log(userId, type, frequency, startDate, endDate);
-
     const user = await User.findById(userId);
 
     if (!user) {
@@ -174,8 +172,6 @@ export const updateTransactionController = async (req, res) => {
 
     const { title, amount, description, date, category, transactionType } =
       req.body;
-
-    console.log(title, amount, description, date, category, transactionType);
 
     const transactionElement = await Transaction.findById(transactionId);
 

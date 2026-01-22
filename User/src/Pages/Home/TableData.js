@@ -17,8 +17,6 @@ const TableData = (props) => {
   const [user, setUser] = useState(null);
 
   const handleEditClick = (itemKey) => {
-    // const buttonId = e.target.id;
-    console.log("Clicked button ID:", itemKey);
     if (transactions.length > 0) {
       const editTran = props.data.filter((item) => item._id === itemKey);
       setCurrId(itemKey);
@@ -41,14 +39,13 @@ const TableData = (props) => {
       window.location.reload();
     }
     else{
-      console.log("error");
+      // Handle edit error silently
     }
 
   }
 
   const handleDeleteClick = async (itemKey) => {
-    console.log(user._id);
-    console.log("Clicked button ID delete:", itemKey);
+
     setCurrId(itemKey);
     const {data} = await axios.post(`${deleteTransactions}/${itemKey}`,{
       userId: props.user._id,
@@ -59,7 +56,7 @@ const TableData = (props) => {
       window.location.reload();
     }
     else{
-      console.log("error");
+      // Handle delete error silently
     }
 
   };

@@ -77,7 +77,6 @@ const Register = () => {
         }
       }
     } catch (error) {
-      console.error(error);
       // Show real error message from backend
       const errorMessage = 
         error.response?.data?.message || 
