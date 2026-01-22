@@ -81,9 +81,8 @@ const TableData = (props) => {
   };
 
   useEffect(() => {
-    setUser(props.user);
     setTransactions(props.data);
-  }, [props.data,props.user, refresh]);
+  }, [props.data, refresh]);
 
   return (
     <>
