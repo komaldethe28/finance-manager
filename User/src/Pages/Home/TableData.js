@@ -14,7 +14,6 @@ const TableData = (props) => {
   const [editingTransaction, setEditingTransaction] = useState(null);
   const [currId, setCurrId] = useState(null);
   const [refresh, setRefresh] = useState(false);
-  const [user, setUser] = useState(null);
 
   const handleEditClick = (itemKey) => {
     if (transactions.length > 0) {
